@@ -1,0 +1,22 @@
+{
+  "name": "req-hdr-parser",
+  "version": "0.1.0",
+  "description": "A request header parser for use with herokuapp.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheDukeOfAwesome/req_hdr_parse.git"
+  },
+  "keywords": [
+    "freecodecamp"
+  ],
+  "author": "Carl J. Kashnier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheDukeOfAwesome/req_hdr_parse/issues"
+  },
+  "homepage": "https://github.com/TheDukeOfAwesome/req_hdr_parse#readme"
+}
