@@ -8,10 +8,10 @@ var lang = req.headers["accept-language"].substring(0, req.headers["accept-langu
 //Parse out IP
 var host = req.socket.remoteAddress;
 //Parse out OS
-var agent = request.headers['x-forwarded-for'] || request.connection.remoteAddress;
+var agent = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 //send back JSON object
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.write(JSON.stringify({"ipaddress": host, "language": lang, "Software": agent[clientIp]}));
+  res.write(JSON.stringify({"ipaddress": host, "language": lang, "Software": agent}));
     //res.write(testOut);
     res.end();
     return
