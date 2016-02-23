@@ -1,5 +1,6 @@
 var http = require('http')
 var url = require('url')
+var getIP = require('ipware').get_ip;
 
 var server = http.createServer(function (req, res) {
 //Parse out language
@@ -7,8 +8,7 @@ var lang = req.headers["accept-language"].substring(0, req.headers["accept-langu
 //Parse out IP
 var host = req.socket.remoteAddress;
 //Parse out OS
-var agent = req.headers["user-agent"].substring(req.headers["user-agent"].search('\\(') +1, req.headers["user-agent"].search('\\)'))
-
+var agent = getIP(req);
 //send back JSON object
   res.writeHead(200, { 'Content-Type': 'application/json' });
   res.write(JSON.stringify({"ipaddress": host, "language": lang, "Software": agent}));
