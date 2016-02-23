@@ -15,7 +15,7 @@ var host = req.headers['x-forwarded-for'] ||
 var agent = req.headers["user-agent"].substring(req.headers["user-agent"].search('\\(') +1, req.headers["user-agent"].search('\\)'))
 //send back JSON object
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.write(JSON.stringify({"ipaddress": host, "language": lang, "Software": agent}));
+  res.write(JSON.stringify({"ipaddress": host, "language": lang, "software": agent}));
     //res.write(testOut);
     res.end();
     return
