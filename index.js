@@ -5,7 +5,7 @@ var server = http.createServer(function (req, res) {
 //Parse out language
 var lang = req.headers["accept-language"].substring(0, req.headers["accept-language"].search(","))
 //Parse out IP
-var host = req.connection.remoteAddress;
+var host = req.socket.remoteAddress;
 //Parse out OS
 var agent = req.headers["user-agent"].substring(req.headers["user-agent"].search('\\(') +1, req.headers["user-agent"].search('\\)'))
 
